@@ -1,7 +1,7 @@
 import express from "express";
 
 const app = express();
-
+app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.post("/bfhl", (req, res) => {
   const { data } = req.body;
@@ -15,9 +15,9 @@ app.post("/bfhl", (req, res) => {
 
   res.status(200).json({
     is_success: true,
-    user_id: "full_name_ddmmyyyy",
-    email: "registered_mail",
-    roll_number: "rollnumber",
+    user_id: "tannu_satija_12022004",
+    email: "tannusatija786@gmail.com",
+    roll_number: "22BCS10206",
     numbers: numbers,
     alphabets: alphabets,
     highest_alphabet: [alphabets.sort()[alphabets.length - 1]],
